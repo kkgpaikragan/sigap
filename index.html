@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SIGAP</title>
-  <link rel="icon" href="https://imgur.com/a/8XWtnPM" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #eee;
-      overflow: hidden; /* Mencegah scroll ganda */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .iframe-container {
-      width: 100%;
-      height: 100dvh; /* Menggunakan dvh agar pas di mobile browser */
-      overflow: hidden;
-    }
+<title>SIGAP</title>
 
-    iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: none;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1e88e5,#43a047);
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+}
+
+.container{
+    text-align:center;
+}
+
+.spinner{
+    width:70px;
+    height:70px;
+    border:7px solid rgba(255,255,255,.3);
+    border-top:7px solid #ffffff;
+    border-radius:50%;
+    margin:auto;
+    animation:putar .8s linear infinite;
+}
+
+@keyframes putar{
+    100%{
+        transform:rotate(360deg);
     }
-  </style>
+}
+
+h2{
+    margin-top:25px;
+    font-size:24px;
+}
+
+p{
+    margin-top:10px;
+    opacity:.9;
+}
+</style>
+
+<script>
+
+window.onload=function(){
+
+    setTimeout(function(){
+
+        window.location.replace("https://script.google.com/macros/s/AKfycbwN7pq8VgwELD9684Oair5NVs4gWneeh1DidJk5LYRIqoAVGLaK3tTTDq8c0-BbR7xP/exec");
+
+    },2000);
+
+}
+
+</script>
+
 </head>
+
 <body>
-  <div class="iframe-container">
-    <iframe
-      id="app"
-      src="https://script.google.com/macros/s/AKfycbwN7pq8VgwELD9684Oair5NVs4gWneeh1DidJk5LYRIqoAVGLaK3tTTDq8c0-BbR7xP/exec"
-      scrolling="yes"
-      allowfullscreen="true"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      allow="fullscreen; camera; microphone; display-capture; geolocation;">
-    </iframe>
-  </div>
+
+<div class="container">
+
+<div class="spinner"></div>
+
+<h2>SIGAP</h2>
+
+<p>Memuat aplikasi...</p>
+
+</div>
+
 </body>
 </html>
